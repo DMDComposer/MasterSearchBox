@@ -17,8 +17,8 @@ This is v1, modified & forked originally from [plul's AutoHotkey Launcher ](http
 
 ## Dependencies
 
-- Sift
-- Notify
+- [Sift](https://www.autohotkey.com/boards/viewtopic.php?t=7302)
+- [Notify](https://www.autohotkey.com/boards/viewtopic.php?t=74449)
 
 ## Known v1 Bugs
 
