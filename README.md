@@ -25,7 +25,7 @@ This is v1, modified & forked originally from [plul's AutoHotkey Launcher ](http
 - Enter sometimes double submits and runs the switch case twice
 - search results nulled will = 0 at times
 
-## Master Search Box v2 aka Master Script Commands
+## [Master Search Box v2 aka Master Script Commands](https://github.com/DMDComposer/MasterScriptCommands)
 
 - Utilizes G33kdude's neutron class to add JS, Html, & CSS for gui
 - Use Elasticlunr js search engine which is superior to Sift's function
