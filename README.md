@@ -12,6 +12,17 @@ This is v1, modified & forked originally from [plul's AutoHotkey Launcher ](http
   - _use of if/else is greater than 5, than switch will yield greater performance._
 - Added notifications when commands used using Maestrith's Notify Class
 - Gave the UI a little upgrade visually.
+- most of script has been rewritten for easier scripting personally, but functions the same.
+
+## Dependencies
+
+- Sift
+- Notify
+
+## Known v1 Bugs
+
+- Enter sometimes double submits and runs the switch case twice
+- search results nulled will = 0 at times
 
 ## Master Search Box v2 aka Master Script Commands
 

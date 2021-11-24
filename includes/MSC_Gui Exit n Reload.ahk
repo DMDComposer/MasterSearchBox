@@ -12,32 +12,9 @@ gui_destroy() { ;~ gui_destroy() Destroy the GUI after use.
 	
 	GuiControl,, Gui_Display,                                                                                  ;~ Reset Intellisense Gui to BLANK
 	Gui, Destroy                                                                                               ;~ Hide GUI
-	;~ Gui MSC: Hide                                                                                                  ;~ Hide GUI
 	WinActivate % Active_Title                                                                                 ;~ Bring focus back to another window found on the desktop
 }
 
 RunReload:
 Reload
-Return
-
-/*
-	;~ DLL Call with restarttmp was causing Encoding issue with the GetCommandLineW (W for whitespace), just use reload.
-	RunReload:
-	Gosub, RunFile
-	Run, %A_AhkPath% "Includes\MSC_Restart.ahk"
-	ExitApp
-	Sleep, 1000
-	Return
-	
-	RunFile:                                                                                         ;~ Create restart file
-	FileDelete, %TmpDir%\restarttmp.ahk
-	While FileExist(TmpDir "\restarttmp.ahk")
-		Sleep 100
-	FileAppend, % "Run, *RunAs " DllCall( "GetCommandLineW", "Str" ), %TmpDir%\restarttmp.ahk, UTF-8 ;~ reload with command line parameters
-	;~ if A_IsAdmin
-		;~ FileAppend, % "Run, *RunAs " DllCall( "GetCommandLineW", "Str" ), %TmpDir%\restarttmp.ahk, UTF-8  ;~ reload with command line parameters
-	;~ else
-		;~ FileAppend, % "Run, " DllCall( "GetCommandLineW", "Str" ), %TmpDir%\restarttmp.ahk, UTF-8  ;~ reload with command line parameters
-	Sleep 100
-	Return
-*/
+return

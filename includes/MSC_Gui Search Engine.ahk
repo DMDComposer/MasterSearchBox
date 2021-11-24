@@ -1,10 +1,4 @@
-﻿;~ /////////////////////////////////////////////////////////////////////////////////////////////////
-;~ ////////////////////////////////////////                    /////////////////////////////////////
-;~ //////////////////////////////////////// ;*[SEARCH ENGINES] /////////////////////////////////////
-;~ ////////////////////////////////////////                    /////////////////////////////////////
-;~ /////////////////////////////////////////////////////////////////////////////////////////////////
-
-gui_change_title(Title,Subtitle := "What would you like to search?",Color := "",Icon := "") {
+﻿gui_change_title(Title,Subtitle := "What would you like to search?",Color := "",Icon := "") {
 	;~ If parameter color is omitted, the message is assumed to be an error message, and given the color red.
 	if (Icon = Space ? Icon := A_Dropbox "\AHK Scripts\_DMD Scripts\_Master Script\Resources\Master If Commands Icons\Cogwheel Settings.ico" : Icon := Icon)
 		
@@ -97,17 +91,3 @@ for Key, Value in MSC_Search
 		Notify().AddWindow(gui_SearchEdit, {Title:Title, Font:Font, TitleFont:TitleFont, Icon:Icon, Animate:Animate, ShowDelay:ShowDelay, IconSize:IconSize, TitleSize:TitleSize, Size:Size, Radius:Radius, Time:Time, Background:Background, Color:Color, TitleColor:TitleColor})
 }
 return
-/*
-	Loop, % search_urls 
-	{
-		search_final_url := StrReplace(search_url%A_Index%, "REPLACEME", uriEncode(gui_SearchEdit))
-		Run % search_final_url
-		Search_Title:= RegExReplace(search_final_url, "s).*?(\d{12}).*?(?=\d{12}|$)", "$1`r`n")
-		If (Title = "" ? Title := Search_Title : Title := Title)	
-			Notify().AddWindow(gui_SearchEdit, {Title:Title, Font:Font, TitleFont:TitleFont, Icon:Icon, Animate:Animate, ShowDelay:ShowDelay, IconSize:IconSize, TitleSize:TitleSize, Size:Size, Radius:Radius, Time:Time, Background:Background, Color:Color, TitleColor:TitleColor})
-	}
-	Notify().AddWindow(gui_SearchEdit, {Title:"Searching For:", Font:"Segoe UI", TitleFont:"Segoe UI", Icon:A_ProgramFiles64 "\AutoHotkey\AutoHotkey.exe, 2", Animate:"Right, Slide", ShowDelay:100, IconSize:64, TitleSize:14, Size:20, Radius:26, Time:2500, Background:"0x1d1f21", Color:"0xFFFFFF", TitleColor:"0x00FF00"})
-	search_urls := 0
-	Return
-	
-*/

@@ -402,34 +402,6 @@ getFokus(){
 	return out
 }
 
-MSC_Title(MasterScriptCommands, Dir){
-	Static oArray := []
-	Loop, read, % Dir
-	{
-		StringCaseSense, Off 
-		If SubStr(A_LoopReadLine, 1, 1) != ";" 								;~ Do not display commented commands
-		{
-			If A_LoopReadLine contains MasterScriptCommands =		
-			{
-				
-				Trimmed 	:= StrSplit(A_LoopReadLine,"MasterScriptCommands = ") 	;~ Find each line with a "command =" in it
-				Comment 	:= StrSplit(A_LoopReadLine, "`;~ ")	
-				;~ oData 	.= SubStr(Trimmed.2,1,3) A_Space SubStr(Trimmed.2,7) 		;~ Trim line down to just command + comment
-				;~ oData 	.= "`n" 										;~ Breaking each command into a new line
-				oArray.Push(StrSplit(Trimmed.2,Chr(34)).2)					;~ Show Command 3 Digit Number				
-				oArray.Push(Comment.2)									;~ Only show Title no ";~"
-			}
-			
-		}
-	}
-	for a, b in oArray { 												;~ For Next Loop
-		if (b = MasterScriptCommands)
-		{
-			Return oArray[A_Index+1]
-		}
-	}
-}
-
 HttpQuery(url) {
 	whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 	whr.Open("GET", url, true)
