@@ -7,7 +7,7 @@ This is v1, modified & forked originally from [plul's AutoHotkey Launcher ](http
 ## What's changed from the original fork?
 
 - Added selectable autocomplete for search commands using AHK Sift function.
-  - ![](images/ex_MSB_02.png)
+  ![](images/ex_MSB_02.png)
 - Use of **Switch** instead of if/else
   - _use of if/else is greater than 5, than switch will yield greater performance._
 - Added notifications when commands used using Maestrith's Notify Class
